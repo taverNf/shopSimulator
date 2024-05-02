@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web store</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="source/script/script.js"></script>
+    <script src="source/script/additem.js"></script>
+    <script src="source/script/removeItem.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body id="body" class="modeCanChange dark">
+    <header id="header" class="modeCanChange dark">
+        <a onclick="prodPage()" id="products" style="font-weight: 500;">produtos</a><a onclick="cart()" id="cartshop">carrinho</a><i id="darkLight" class="fa-solid fa-moon" onclick="lightDark()" title="Change dark / light mode"></i>
+    </header>
+    <main>
+        <div class="container activepage" id="produtos">
+            <div class="card 1 modeCanChange dark" id="1">
+                <div class="card-img ae"></div>
+                <h1 class="card-title">Anthony Edwards 1</h1>
+                <p class="card-desc"><b>Cor:</b> Branco</p>
+                <p class="card-price">R$ 999<sup>,90</sup></p>
+                <button class="card-btn" onclick="addItem1(), newGreen()" id="btn-ae">Adc. ao carrinho</button>
+            </div>
+            <div class="card 2 modeCanChange dark" id="2">
+                <div class="card-img gi"></div>
+                <h1 class="card-title">Giannis Immortality 3</h1>
+                <p class="card-desc"><b>Cor:</b> Branco e azul</p>
+                <p class="card-price">R$ 549<sup>,90</sup></p>
+                <button class="card-btn" onclick="addItem2(), newGreen()" id="btn-gi">Adc. ao carrinho</button>
+            </div>
+            <div class="card 3 modeCanChange dark" id="3">
+                <div class="card-img kd"></div>
+                <h1 class="card-title">Kd Trey 5 X</h1>
+                <p class="card-desc"><b>Cor:</b> Azul</p>
+                <p class="card-price">R$ 599<sup>,90</sup></p>
+                <button class="card-btn" onclick="addItem3(), newGreen()" id="btn-kd">Adc. ao carrinho</button>
+            </div>
+            <div class="card 4 modeCanChange dark" id="4">
+                <div class="card-img lb"></div>
+                <h1 class="card-title">LeBron 21</h1>
+                <p class="card-desc"><b>Cor:</b> Roxo</p>
+                <p class="card-price">R$ 1399<sup>,90</sup></p>
+                <button class="card-btn" onclick="addItem4(), newGreen()" id="btn-lb">Adc. ao carrinho</button>
+            </div>
+            <div class="card 5 modeCanChange dark" id="5">
+                <div class="card-img hv"></div>
+                <h1 class="card-title">Harden vol.8</h1>
+                <p class="card-desc"><b>Cor:</b> Branco e preto</p>
+                <p class="card-price">R$ 1399<sup>,90</sup></p>
+                <button class="card-btn" onclick="addItem5(), newGreen()" id="btn-hv">Adc. ao carrinho</button>
+            </div>
+            <div class="card 6 modeCanChange dark" id="6">
+                <div class="card-img ak"></div>
+                <h1 class="card-title">Anta Kai 1</h1>
+                <p class="card-desc"><b>Cor:</b> Branco, azul e dourado</p>
+                <p class="card-price">R$ 799<sup>,90</sup></p>
+                <button class="card-btn" onclick="addItem6(), newGreen()" id="btn-ak">Adc. ao carrinho</button>
+            </div>
+            <div class="card 7 modeCanChange dark" id="7">
+                <div class="card-img np"></div>
+                <h1 class="card-title">Precision 7</h1>
+                <p class="card-desc"><b>Cor:</b> Vermelho e preto</p>
+                <p class="card-price">R$ 549<sup>,90</sup></p>
+                <button class="card-btn" onclick="addItem7(), newGreen()" id="btn-np">Adc. ao carrinho</button>
+            </div>
+            <div class="card 8 modeCanChange dark" id="8">
+                <div class="card-img ga"></div>
+                <h1 class="card-title">Gt Academy 1</h1>
+                <p class="card-desc"><b>Cor:</b> Branco</p>
+                <p class="card-price">R$ 699<sup>,90</sup></p>
+                <button class="card-btn" onclick="addItem8(), newGreen()" id="btn-ga">Adc. ao carrinho</button>
+            </div>
+            <div class="card 9 modeCanChange dark" id="9">
+                <div class="card-img mb"></div>
+                <h1 class="card-title">LaMelo MB 03</h1>
+                <p class="card-desc"><b>Cor:</b> Roxo e verde</p>
+                <p class="card-price">R$ 999<sup>,90</sup></p>
+                <button class="card-btn" onclick="addItem9(), newGreen()" id="btn-mb">Adc. ao carrinho</button>
+            </div>
+        </div>
+        <div class="container cart" id="carrinho">
+
+            <div class="cartShoe ae modeCanChange dark" id="cartShoeAE">
+                <img src="source/imgs/AE__1.webp" alt="" class="cartShoeImg ae">
+                <div class="cartShoeInfos ae">   
+                    <div class="cartShoeName ae">Anthony Edwards 1</div>
+                    <div class="cartShoeColor ae"><b>Cor:</b> Branco</div>
+                </div>
+                <i class="fa-regular fa-trash-can" onclick="removeAE()"></i>
+                <div class="cartShoePrice ae" id="priceae">R$ 999,90</div>
+            </div>
+
+            <div class="cartShoe gi modeCanChange dark" id="cartShoeGI">
+                <div class="cartShoeImg gi"></div>
+                <div class="cartShoeInfos gi">   
+                    <div class="cartShoeName gi">Giannis Immortality 3</div>
+                    <div class="cartShoeColor gi"><b>Cor:</b> Azul e branco</div>
+                </div>
+                <i class="fa-regular fa-trash-can" onclick="removeGI()"></i>
+                <div class="cartShoePrice gi" id="pricegi">R$ 549,90</div>
+            </div>
+
+            <div class="cartShoe kd modeCanChange dark" id="cartShoeKD">
+                <div class="cartShoeImg kd"></div>
+                <div class="cartShoeInfos kd">   
+                    <div class="cartShoeName kd">Kd Trey 5 X</div>
+                    <div class="cartShoeColor kd"><b>Cor:</b> Azul</div>
+                </div>
+                <i class="fa-regular fa-trash-can" onclick="removeKD()"></i>
+                <div class="cartShoePrice kd" id="pricekd">R$ 599,90</div>
+            </div>
+
+            <div class="cartShoe lb modeCanChange dark" id="cartShoeLB">
+                <div class="cartShoeImg lb"></div>
+                <div class="cartShoeInfos lb">   
+                    <div class="cartShoeName lb">LeBron 21</div>
+                    <div class="cartShoeColor lb"><b>Cor:</b> Roxo</div>
+                </div>
+                <i class="fa-regular fa-trash-can" onclick="removeLB()"></i>
+                <div class="cartShoePrice lb" id="pricelb">R$ 1399,90</div>
+            </div>
+
+            <div class="cartShoe hv modeCanChange dark" id="cartShoeHV">
+                <div class="cartShoeImg hv"></div>
+                <div class="cartShoeInfos hv">   
+                    <div class="cartShoeName hv">Harden vol.8</div>
+                    <div class="cartShoeColor hv"><b>Cor:</b> Branco e preto</div>
+                </div>
+                <i class="fa-regular fa-trash-can" onclick="removeHV()"></i>
+                <div class="cartShoePrice hv" id="pricehv">R$ 1399,90</div
+>
+            </div>
+
+            <div class="cartShoe ak modeCanChange dark" id="cartShoeAK">
+                <div class="cartShoeImg ak"></div>
+                <div class="cartShoeInfos ak">   
+                    <div class="cartShoeName ak">Anta kai 1</div>
+                    <div class="cartShoeColor ak"><b>Cor:</b> Branco, azul e dourado</div>
+                </div>
+                <i class="fa-regular fa-trash-can" onclick="removeAK()"></i>
+                <div class="cartShoePrice ak" id="priceak">R$ 799,90</div>
+            </div>
+
+            <div class="cartShoe np modeCanChange dark" id="cartShoeNP">
+                <div class="cartShoeImg np"></div>
+                <div class="cartShoeInfos np">   
+                    <div class="cartShoeName np">Precision 7</div>
+                    <div class="cartShoeColor np"><b>Cor:</b> Preto e Vermelho</div>
+                </div>
+                <i class="fa-regular fa-trash-can" onclick="removeNP()"></i>
+                <div class="cartShoePrice np" id="pricenp">R$ 549,90</div>
+            </div>
+
+            <div class="cartShoe ga modeCanChange dark" id="cartShoeGA">
+                <div class="cartShoeImg ga"></div>
+                <div class="cartShoeInfos ga">   
+                    <div class="cartShoeName ga">Gt Academy 1</div>
+                    <div class="cartShoeColor ga"><b>Cor:</b> Branco</div>
+                </div>
+                <i class="fa-regular fa-trash-can" onclick="removeGA()"></i>
+                <div class="cartShoePrice ga" id="pricega">R$ 699,90</div>
+            </div>
+
+            <div class="cartShoe mb modeCanChange dark" id="cartShoeMB">
+                <div class="cartShoeImg mb"></div>
+                <div class="cartShoeInfos mb">   
+                    <div class="cartShoeName mb">LaMelo MB 03</div>
+                    <div class="cartShoeColor mb"><b>Cor:</b> Roxo e verde</div>
+                </div>
+                <i class="fa-regular fa-trash-can" onclick="removeMB()"></i>
+                <div class="cartShoePrice mb" id="pricemb">R$ 999,90</div>
+            </div>
+
+            <div id="total" class="modeCanChange dark">
+                <span class="total modeCanChange dark"></span>
+                <button id="finish" onclick="finish()">Finalizar compra</button>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>
